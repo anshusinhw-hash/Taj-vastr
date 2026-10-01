@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taj Vastr Thrift | Pre-Loved Fashion & Sustainable Style</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        parchment: {
+                            50: '#fcf8ec',
+                            100: '#f7edcc',
+                            200: '#ebd79e',
+                            300: '#dec170',
+                            400: '#d0ab43',
+                            500: '#c29624',
+                            600: '#a37a1a',
+                            700: '#825f15',
+                            800: '#694d13',
+                            900: '#543e11',
+                            base: '#f4ebd0',
+                            dark: '#e3d2a7'
+                        },
+                        royalBlue: {
+                            50: '#eef2fb',
+                            600: '#1b3b6f',
+                            700: '#142c54',
+                            800: '#0e1e3a',
+                            900: '#081224'
+                        },
+                        antiqueGold: {
+                            light: '#f3e5ab',
+                            DEFAULT: '#d4af37',
+                            dark: '#aa820a'
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f4ebd0;
+            background-image: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, rgba(130, 95, 21, 0.15) 100%), 
+                              url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+            color: #2c2211;
+            font-family: 'Poppins', sans-serif;
+        }
+        .heading-font {
+            font-family: 'Cinzel', serif;
+        }
+        .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .parchment-border {
+            border: 3px solid #825f15;
+            box-shadow: 0 10px 30px rgba(105, 77, 19, 0.25), inset 0 0 40px rgba(212, 175, 55, 0.2);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa820a 100%);
+        }
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 60%, #947008 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-antiqueGold selection:text-royalBlue-900">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-royalBlue-800 text-antiqueGold-light text-xs sm:text-sm py-2 px-4 text-center font-cinzel tracking-wider border-b border-antiqueGold/30 flex justify-center items-center gap-4">
+        <span><i class="fas fa-crown text-antiqueGold mr-1"></i> Curated by Shivam, Roshan & Piyush</span>
+        <span class="hidden md:inline">|</span>
+        <span class="hidden md:inline"><i class="fas fa-leaf text-antiqueGold mr-1"></i> Sustainable Pre-Loved Fashion Est. 2026</span>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-40 bg-parchment-base/95 backdrop-blur-md border-b-2 border-royalBlue-800/20 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo Replica -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-full royalBlue-800 bg-royalBlue-800 flex items-center justify-center border-2 border-antiqueGold shadow-lg relative overflow-hidden group-hover:scale-105 transition-transform">
+                    <!-- Miniature Logo SVG -->
+                    <svg viewBox="0 0 200 200" class="w-full h-full p-0.5">
+                        <circle cx="100" cy="100" r="95" fill="#1b3b6f" stroke="#d4af37" stroke-width="4"/>
+                        <circle cx="100" cy="100" r="75" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="4 2"/>
+                        <!-- Taj Silhouette -->
+                        <path d="M75 120 L75 90 L82 85 L82 70 L95 55 L105 55 L118 70 L118 85 L125 90 L125 120 Z" fill="#d4af37" opacity="0.9"/>
+                        <circle cx="100" cy="50" r="10" fill="#d4af37"/>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="heading-font font-black text-xl sm:text-2xl tracking-wider text-royalBlue-900">TAJ VASTR</h1>
+                    <p class="text-[10px] tracking-[0.2em] uppercase text-royalBlue-700 font-bold -mt-1">Thrift • Est. 2026</p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-cinzel font-bold text-royalBlue-900 text-sm">
+                <a href="#home" class="hover:text-antiqueGold-dark transition-colors">Home</a>
+                <a href="#catalog" class="hover:text-antiqueGold-dark transition-colors">Collection</a>
+                <a href="#about" class="hover:text-antiqueGold-dark transition-colors">Our Story</a>
+                <a href="#contact" class="hover:text-antiqueGold-dark transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions (Cart & Admin) -->
+            <div class="flex items-center gap-3">
+                <button onclick="openAdminModal()" class="hidden sm:flex items-center gap-1.5 text-xs bg-royalBlue-800 text-antiqueGold hover:bg-royalBlue-900 px-3 py-2 rounded font-cinzel tracking-wider border border-antiqueGold/40 shadow">
+                    <i class="fas fa-plus-circle"></i> List Item
+                </button>
+                <button onclick="toggleCart()" class="relative p-2.5 rounded-full bg-parchment-200 hover:bg-parchment-300 border border-royalBlue-800/30 text-royalBlue-900 transition-colors">
+                    <i class="fas fa-shopping-bag text-lg"></i>
+                    <span id="cartCount" class="absolute -top-1 -right-1 bg-royalBlue-800 text-antiqueGold text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border border-antiqueGold">0</span>
+                </button>
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-lg bg-parchment-200 text-royalBlue-900">
+                    <i class="fas fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-parchment-100 border-b border-royalBlue-800/20 px-4 py-4 space-y-3 font-cinzel font-bold">
+            <a href="#home" class="block py-1 text-royalBlue-900 hover:text-antiqueGold-dark">Home</a>
+            <a href="#catalog" class="block py-1 text-royalBlue-900 hover:text-antiqueGold-dark">Collection</a>
+            <a href="#about" class="block py-1 text-royalBlue-900 hover:text-antiqueGold-dark">Our Story</a>
+            <a href="#contact" class="block py-1 text-royalBlue-900 hover:text-antiqueGold-dark">Contact</a>
+            <button onclick="openAdminModal()" class="w-full text-left py-2 text-royalBlue-900 flex items-center gap-2 border-t border-royalBlue-800/10 mt-2">
+                <i class="fas fa-plus-circle text-antiqueGold"></i> List New Item (Admin)
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section with Exact Logo & Parchment Theme -->
+    <section id="home" class="relative py-12 md:py-20 px-4 max-w-7xl mx-auto flex flex-col items-center text-center">
+        <!-- Logo Showcase Emblem -->
+        <div class="relative mb-8 group">
+            <div class="absolute -inset-2 bg-gradient-to-r from-antiqueGold via-royalBlue-800 to-antiqueGold rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+            <div class="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full royalBlue-800 bg-royalBlue-900 p-2 border-4 border-antiqueGold shadow-2xl flex items-center justify-center overflow-hidden">
+                <!-- SVG Emblem Replica of User Logo -->
+                <svg viewBox="0 0 500 500" class="w-full h-full drop-shadow-2xl">
+                    <defs>
+                        <radialGradient id="goldPlate" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#f8edc5"/>
+                            <stop offset="60%" stop-color="#d4af37"/>
+                            <stop offset="100%" stop-color="#8a6912"/>
+                        </radialGradient>
+                        <radialGradient id="domeGrad" cx="50%" cy="30%" r="60%">
+                            <stop offset="0%" stop-color="#e0916b"/>
+                            <stop offset="100%" stop-color="#6e2d1d"/>
+                        </radialGradient>
+                    </defs>
+                    <!-- Outer Blue Ring -->
+                    <circle cx="250" cy="250" r="235" fill="#142c54" stroke="#d4af37" stroke-width="8"/>
+                    <circle cx="250" cy="250" r="215" fill="none" stroke="#d4af37" stroke-width="2" stroke-dasharray="6 4"/>
+                    
+                    <!-- Circular Text Representation -->
+                    <path id="curve1" d="M 80,250 A 170,170 0 0,1 420,250" fill="none"/>
+                    <text font-family="Cinzel" font-weight="bold" font-size="20" fill="#f3e5ab" letter-spacing="3">
+                        <textPath href="#curve1" startOffset="50%" text-anchor="middle">PRE-LOVED FASHION • SUSTAINABLE STYLE</textPath>
+                    </text>
+                    
+                    <path id="curve2" d="M 420,250 A 170,170 0 0,1 80,250" fill="none"/>
+                    <text font-family="Cinzel" font-weight="bold" font-size="18" fill="#f3e5ab" letter-spacing="2">
+                        <textPath href="#curve2" startOffset="50%" text-anchor="middle">EST. 2026 • CURATED BY THREE FRIENDS</textPath>
+                    </text>
+
+                    <!-- Inner Golden Disc -->
+                    <circle cx="250" cy="250" r="145" fill="url(#goldPlate)" stroke="#4a3508" stroke-width="5"/>
+                    
+                    <!-- Taj Mahal Architectural Silhouette -->
+                    <!-- Base Platform -->
+                    <rect x="150" y="275" width="200" height="15" fill="#526850" stroke="#2c3a2a" stroke-width="2"/>
+                    <!-- Minarets -->
+                    <rect x="175" y="180" width="12" height="95" fill="#bc7c5c" stroke="#5c3420" stroke-width="2"/>
+                    <rect x="313" y="180" width="12" height="95" fill="#bc7c5c" stroke="#5c3420" stroke-width="2"/>
+                    <rect x="195" y="210" width="8" height="65" fill="#698572" stroke="#354539" stroke-width="1.5"/>
+                    <rect x="297" y="210" width="8" height="65" fill="#698572" stroke="#354539" stroke-width="1.5"/>
+                    <!-- Main Body & Domes -->
+                    <path d="M 205 275 L 205 230 L 220 230 L 220 275 Z" fill="#b06c50" stroke="#572e1e" stroke-width="1.5"/>
+                    <path d="M 280 275 L 280 230 L 295 230 L 295 275 Z" fill="#b06c50" stroke="#572e1e" stroke-width="1.5"/>
+                    <path d="M 215 275 L 215 210 L 285 210 L 285 275 Z" fill="#c4876b" stroke="#663522" stroke-width="2"/>
+                    <!-- Central Dome -->
+                    <path d="M 235 210 C 235 170, 265 170, 265 210 Z" fill="url(#domeGrad)" stroke="#4a1f14" stroke-width="2"/>
+                    <!-- Side Domes -->
+                    <path d="M 210 210 C 210 185, 230 185, 230 210 Z" fill="url(#domeGrad)" stroke="#4a1f14" stroke-width="1.5"/>
+                    <path d="M 270 210 C 270 185, 290 185, 290 210 Z" fill="url(#domeGrad)" stroke="#4a1f14" stroke-width="1.5"/>
+                    <!-- Central Arch -->
+                    <path d="M 235 275 L 235 240 C 235 225, 265 225, 265 240 L 265 275 Z" fill="#204030" stroke="#d4af37" stroke-width="2"/>
+
+                    <!-- Hindi Typography "ताज वस्त्र" -->
+                    <text x="250" y="315" font-family="Cinzel" font-weight="900" font-size="28" fill="#4a1b4e" text-anchor="middle" stroke="#d4af37" stroke-width="0.8">ताज वस्त्र</text>
+                    <text x="250" y="342" font-family="Cinzel" font-weight="bold" font-size="20" fill="#2d1330" text-anchor="middle" letter-spacing="4">THRIFT</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <h2 class="heading-font text-3xl sm:text-5xl lg:text-6xl font-black text-royalBlue-900 tracking-wide mb-4">
+            Royal Heritage, <span class="gold-text-gradient">Modern Thrift</span>
+        </h2>
+        <p class="serif-font italic text-lg sm:text-2xl text-royalBlue-800 max-w-2xl mb-8">
+            "Handpicked pre-loved fashion curated with passion by three friends for the conscious wardrobe."
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#catalog" class="bg-royalBlue-800 hover:bg-royalBlue-900 text-antiqueGold px-8 py-3.5 rounded font-cinzel font-bold tracking-widest shadow-xl border border-antiqueGold/50 transition-all transform hover:-translate-y-0.5">
+                Explore Collection <i class="fas fa-arrow-down ml-2"></i>
+            </a>
+            <button onclick="openAdminModal()" class="bg-parchment-200 hover:bg-parchment-300 text-royalBlue-900 px-6 py-3.5 rounded font-cinzel font-bold tracking-widest border-2 border-royalBlue-800/40 shadow transition-all">
+                <i class="fas fa-user-shield mr-2 text-royalBlue-800"></i> Admin Inventory Panel
+            </button>
+        </div>
+    </section>
+
+    <!-- Catalog Section (Fresh & Empty Initially) -->
+    <section id="catalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
+        <div class="text-center mb-12 border-b-2 border-royalBlue-800/20 pb-6">
+            <h3 class="heading-font text-2xl sm:text-4xl font-bold text-royalBlue-900">The Royal Curated Rack</h3>
+            <p class="text-royalBlue-700 mt-2 font-poppins text-sm sm:text-base">Discover unique pre-loved pieces added fresh by our curators.</p>
+            
+            <!-- Category Filters -->
+            <div id="filterContainer" class="flex flex-wrap justify-center gap-2 mt-6 font-cinzel text-xs sm:text-sm font-bold">
+                <button onclick="filterCatalog('all')" data-category="all" class="filter-btn px-4 py-2 rounded bg-royalBlue-800 text-antiqueGold border border-antiqueGold/40 shadow transition">All Treasures</button>
+                <button onclick="filterCatalog('men')" data-category="men" class="filter-btn px-4 py-2 rounded bg-parchment-200 text-royalBlue-900 hover:bg-parchment-300 border border-royalBlue-800/30 transition">Men's Wear</button>
+                <button onclick="filterCatalog('women')" data-category="women" class="filter-btn px-4 py-2 rounded bg-parchment-200 text-royalBlue-900 hover:bg-parchment-300 border border-royalBlue-800/30 transition">Women's Wear</button>
+                <button onclick="filterCatalog('unisex')" data-category="unisex" class="filter-btn px-4 py-2 rounded bg-parchment-200 text-royalBlue-900 hover:bg-parchment-300 border border-royalBlue-800/30 transition">Unisex / Jackets</button>
+            </div>
+        </div>
+
+        <!-- Product Grid or Empty State -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Dynamically populated or empty -->
+        </div>
+
+        <!-- Empty State Prompt -->
+        <div id="emptyCatalogState" class="hidden text-center py-16 bg-parchment-100 rounded-xl border-2 border-dashed border-royalBlue-800/30 max-w-xl mx-auto p-8 shadow-inner">
+            <div class="w-16 h-16 bg-royalBlue-800/10 text-royalBlue-800 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i class="fas fa-box-open"></i>
+            </div>
+            <h4 class="heading-font font-bold text-xl text-royalBlue-900 mb-2">The Rack is Freshly Cleaned!</h4>
+            <p class="text-royalBlue-700 text-sm mb-6">There are currently no listings in the store. Use the admin panel to add your first thrift items.</p>
+            <button onclick="openAdminModal()" class="bg-royalBlue-800 hover:bg-royalBlue-900 text-antiqueGold px-6 py-2.5 rounded font-cinzel text-xs font-bold tracking-widest border border-antiqueGold/40 shadow">
+                <i class="fas fa-plus-circle mr-1"></i> Add First Item Now
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section - Founders: Shivam, Roshan, Piyush -->
+    <section id="about" class="bg-royalBlue-900 text-parchment-50 py-20 px-4 mt-12 relative overflow-hidden border-t-4 border-antiqueGold">
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-antiqueGold/5 blur-3xl pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-antiqueGold text-xs font-cinzel tracking-[0.3em] uppercase font-bold">Behind The Curtains</span>
+                <h3 class="heading-font text-3xl sm:text-4xl font-bold mt-2 text-antiqueGold-light">Curated By Three Friends</h3>
+                <div class="w-24 h-1 bg-antiqueGold mx-auto mt-4 rounded"></div>
+                <p class="mt-4 text-parchment-200 serif-font italic text-lg">
+                    United by a shared love for timeless fashion, vintage aesthetics, and sustainability, we founded Taj Vastr in 2026 to give pre-loved clothing a second royal chapter.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Founder 1: Shivam -->
+                <div class="bg-royalBlue-800/80 border border-antiqueGold/30 rounded-xl p-6 text-center shadow-xl hover:border-antiqueGold transition duration-300">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-antiqueGold to-royalBlue-700 flex items-center justify-center text-royalBlue-900 text-2xl font-cinzel font-black mb-4 shadow-inner border-2 border-antiqueGold">
+                        S
+                    </div>
+                    <h4 class="heading-font text-xl font-bold text-antiqueGold">Shivam</h4>
+                    <span class="text-xs text-parchment-300 uppercase tracking-widest block mt-1 font-cinzel">Co-Founder & Curator</span>
+                    <p class="text-xs text-parchment-200 mt-4 leading-relaxed font-poppins">
+                        Passionate about rare vintage streetwear and classic heritage aesthetics.
+                    </p>
+                </div>
+
+                <!-- Founder 2: Roshan -->
+                <div class="bg-royalBlue-800/80 border border-antiqueGold/30 rounded-xl p-6 text-center shadow-xl hover:border-antiqueGold transition duration-300">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-antiqueGold to-royalBlue-700 flex items-center justify-center text-royalBlue-900 text-2xl font-cinzel font-black mb-4 shadow-inner border-2 border-antiqueGold">
+                        R
+                    </div>
+                    <h4 class="heading-font text-xl font-bold text-antiqueGold">Roshan</h4>
+                    <span class="text-xs text-parchment-300 uppercase tracking-widest block mt-1 font-cinzel">Co-Founder & Stylist</span>
+                    <p class="text-xs text-parchment-200 mt-4 leading-relaxed font-poppins">
+                        Expert in textile quality inspection, curation, and sustainable fashion trends.
+                    </p>
+                </div>
+
+                <!-- Founder 3: Piyush -->
+                <div class="bg-royalBlue-800/80 border border-antiqueGold/30 rounded-xl p-6 text-center shadow-xl hover:border-antiqueGold transition duration-300">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-antiqueGold to-royalBlue-700 flex items-center justify-center text-royalBlue-900 text-2xl font-cinzel font-black mb-4 shadow-inner border-2 border-antiqueGold">
+                        P
+                    </div>
+                    <h4 class="heading-font text-xl font-bold text-antiqueGold">Piyush</h4>
+                    <span class="text-xs text-parchment-300 uppercase tracking-widest block mt-1 font-cinzel">Co-Founder & Operations</span>
+                    <p class="text-xs text-parchment-200 mt-4 leading-relaxed font-poppins">
+                        Managing community connections, orders, and eco-friendly packaging.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-5xl mx-auto px-4 py-16 w-full">
+        <div class="bg-parchment-100 border-2 border-royalBlue-800/30 rounded-2xl p-8 sm:p-12 shadow-xl flex flex-col md:flex-row gap-8 items-center justify-between">
+            <div class="space-y-4 max-w-lg">
+                <span class="text-royalBlue-700 text-xs font-cinzel tracking-[0.2em] uppercase font-bold">Get In Touch</span>
+                <h3 class="heading-font text-2xl sm:text-3xl font-bold text-royalBlue-900">Connect With Taj Vastr</h3>
+                <p class="text-sm text-royalBlue-800 font-poppins">
+                    Have questions about an item, sizing, or want to collaborate? Reach out to us directly through email or WhatsApp numbers.
+                </p>
+                <div class="space-y-3 pt-2 font-poppins text-sm text-royalBlue-900">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-royalBlue-800 text-antiqueGold flex items-center justify-center"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <span class="text-xs text-royalBlue-700 block font-cinzel font-bold">Email Us</span>
+                            <a href="mailto:tajvastr@gmail.com" class="font-bold hover:underline">tajvastr@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-royalBlue-800 text-antiqueGold flex items-center justify-center"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <span class="text-xs text-royalBlue-700 block font-cinzel font-bold">Helpline Numbers</span>
+                            <a href="tel:+917820047429" class="font-bold hover:underline">+91 78200 47429</a>, 
+                            <a href="tel:+919675566289" class="font-bold hover:underline">+91 96755 66289</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-auto bg-royalBlue-800 text-antiqueGold p-8 rounded-xl border border-antiqueGold/40 text-center shadow-2xl">
+                <i class="fas fa-store text-4xl mb-3 text-antiqueGold"></i>
+                <h4 class="heading-font font-bold text-lg">Taj Vastr Thrift Store</h4>
+                <p class="text-xs text-parchment-200 mt-1">Sustainable Pre-Loved Fashion</p>
+                <div class="mt-6 pt-4 border-t border-antiqueGold/20 flex justify-center gap-4 text-xl">
+                    <a href="mailto:tajvastr@gmail.com" class="hover:text-white transition"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/917820047429" target="_blank" class="hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-royalBlue-900 text-parchment-200 border-t border-antiqueGold/30 py-8 text-center text-xs font-cinzel">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Taj Vastr Thrift. All rights reserved. Curated by Shivam, Roshan & Piyush.</p>
+            <div class="flex items-center gap-4">
+                <a href="#home" class="hover:text-antiqueGold">Privacy Policy</a>
+                <span>•</span>
+                <a href="#home" class="hover:text-antiqueGold">Terms of Service</a>
+                <span>•</span>
+                <button onclick="openAdminModal()" class="text-antiqueGold hover:underline font-bold">Admin Panel</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART SIDEBAR DRAWER -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex justify-end">
+        <div class="w-full max-w-md bg-parchment-50 h-full flex flex-col shadow-2xl transform transition-transform duration-300">
+            <div class="p-6 bg-royalBlue-800 text-antiqueGold flex items-center justify-between border-b border-antiqueGold/30">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3 class="heading-font font-bold text-lg">Your Thrift Bag</h3>
+                </div>
+                <button onclick="toggleCart()" class="text-antiqueGold hover:text-white text-xl"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-6 space-y-4">
+                <!-- Cart items dynamically inserted -->
+            </div>
+            <div class="p-6 bg-parchment-100 border-t border-royalBlue-800/20 space-y-3">
+                <div class="flex justify-between font-cinzel font-bold text-royalBlue-900 text-lg">
+                    <span>Total:</span>
+                    <span id="cartTotalPrice">₹0</span>
+                </div>
+                <button onclick="checkoutWhatsApp()" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white py-3 rounded font-cinzel font-bold tracking-wider shadow flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i> Checkout via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div id="productModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-parchment-50 w-full max-w-2xl rounded-xl overflow-hidden shadow-2xl border-2 border-royalBlue-800/30 flex flex-col sm:flex-row relative">
+            <button onclick="closeProductModal()" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-royalBlue-800 text-antiqueGold flex items-center justify-center hover:bg-royalBlue-900"><i class="fas fa-times"></i></button>
+            <div class="sm:w-1/2 h-64 sm:h-auto bg-parchment-200 relative">
+                <img id="modalImg" src="" alt="Product" class="w-full h-full object-cover">
+            </div>
+            <div class="sm:w-1/2 p-6 flex flex-col justify-between space-y-4">
+                <div>
+                    <span id="modalCategory" class="text-xs font-cinzel uppercase tracking-widest text-royalBlue-700 font-bold block">Category</span>
+                    <h3 id="modalTitle" class="heading-font font-bold text-2xl text-royalBlue-900 mt-1">Product Title</h3>
+                    <p id="modalPrice" class="text-lg font-bold text-royalBlue-800 mt-2">₹0</p>
+                    <div class="flex gap-2 my-2 text-xs font-bold text-royalBlue-900">
+                        <span class="bg-parchment-200 px-2 py-1 rounded border border-royalBlue-800/20">Size: <span id="modalSize">M</span></span>
+                        <span class="bg-parchment-200 px-2 py-1 rounded border border-royalBlue-800/20">Condition: <span id="modalCondition">Mint</span></span>
+                    </div>
+                    <p id="modalDesc" class="text-xs text-royalBlue-800 font-poppins leading-relaxed mt-3">Description here...</p>
+                </div>
+                <button id="modalAddToCartBtn" onclick="" class="w-full bg-royalBlue-800 hover:bg-royalBlue-900 text-antiqueGold py-3 rounded font-cinzel font-bold text-sm tracking-wider shadow">
+                    <i class="fas fa-shopping-bag mr-2"></i> Add to Bag
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN INVENTORY MANAGEMENT MODAL -->
+    <div id="adminModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-parchment-50 w-full max-w-lg rounded-xl overflow-hidden shadow-2xl border-2 border-royalBlue-800">
+            <div class="p-4 bg-royalBlue-800 text-antiqueGold flex items-center justify-between border-b border-antiqueGold/30">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-user-shield"></i>
+                    <h3 class="heading-font font-bold text-base">Admin Inventory Manager</h3>
+                </div>
+                <button onclick="closeAdminModal()" class="text-antiqueGold hover:text-white"><i class="fas fa-times"></i></button>
+            </div>
+            <form id="addProductForm" onsubmit="handleAddNewItem(event)" class="p-6 space-y-4 font-poppins text-xs sm:text-sm">
+                <div>
+                    <label class="block font-cinzel font-bold text-royalBlue-900 mb-1">Item Title</label>
+                    <input type="text" id="adminTitle" required placeholder="e.g. Vintage Embroidered Kurta" class="w-full p-2.5 rounded bg-parchment-100 border border-royalBlue-800/30 focus:outline-none focus:border-royalBlue-800">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block font-cinzel font-bold text-royalBlue-900 mb-1">Price (₹)</label>
+                        <input type="number" id="adminPrice" required placeholder="1499" class="w-full p-2.5 rounded bg-parchment-100 border border-royalBlue-800/30 focus:outline-none focus:border-royalBlue-800">
+                    </div>
+                    <div>
+                        <label class="block font-cinzel font-bold text-royalBlue-900 mb-1">Category</label>
+                        <select id="adminCategory" class="w-full p-2.5 rounded bg-parchment-100 border border-royalBlue-800/30 focus:outline-none focus:border-royalBlue-800 font-cinzel">
+                            <option value="men">Men's Wear</option>
+                            <option value="women">Women's Wear</option>
+                            <option value="unisex">Unisex / Jackets</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block font-cinzel font-bold text-royalBlue-900 mb-1">Size</label>
+                        <input type="text" id="adminSize" required placeholder="M / L / Free Size" class="w-full p-2.5 rounded bg-parchment-100 border border-royalBlue-800/30 focus:outline-none focus:border-royalBlue-800">
+                    </div>
+                    <div>
+                        <label class="block font-cinzel font-bold text-royalBlue-900 mb-1">Condition</label>
+                        <input type="text" id="adminCondition" required placeholder="Mint / Gently Used / Vintage" class="w-full p-2.5 rounded bg-parchment-100 border border-royalBlue-800/30 focus:outline-none focus:border-royalBlue-800">
+                    </div>
+                </div>
+                <div>
+                    <label class="block font-cinzel font-bold text-royalBlue-900 mb-1">Image URL</label>
+                    <input type="url" id="adminImage" required placeholder="https://images.unsplash.com/..." class="w-full p-2.5 rounded bg-parchment-100 border border-royalBlue-800/30 focus:outline-none focus:border-royalBlue-800">
+                    <span class="text-[10px] text-royalBlue-700 mt-1 block">Paste any valid image link (e.g. Unsplash apparel photo)</span>
+                </div>
+                <div>
+                    <label class="block font-cinzel font-bold text-royalBlue-900 mb-1">Description</label>
+                    <textarea id="adminDesc" rows="2" required placeholder="Brief story about this pre-loved piece..." class="w-full p-2.5 rounded bg-parchment-100 border border-royalBlue-800/30 focus:outline-none focus:border-royalBlue-800"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-royalBlue-800 hover:bg-royalBlue-900 text-antiqueGold py-3 rounded font-cinzel font-bold text-sm tracking-wider shadow">
+                    <i class="fas fa-plus-circle mr-2"></i> Publish to Store
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Store State (Freshly empty by default)
+        let products = [];
+        let cart = [];
+        let currentFilter = 'all';
+
+        // Load saved inventory from localStorage if any
+        try {
+            const savedProducts = localStorage.getItem('taj_vastr_products');
+            if (savedProducts) {
+                products = JSON.parse(savedProducts);
+            }
+        } catch (e) {
+            products = [];
+        }
+
+        function saveProductsToStorage() {
+            try {
+                localStorage.setItem('taj_vastr_products', JSON.stringify(products));
+            } catch (e) {}
+        }
+
+        // Render Catalog
+        function renderCatalog() {
+            const grid = document.getElementById('productGrid');
+            const emptyState = document.getElementById('emptyCatalogState');
+            
+            const filtered = currentFilter === 'all' 
+                ? products 
+                : products.filter(p => p.category === currentFilter);
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            grid.innerHTML = filtered.map(p => `
+                <div class="bg-parchment-100 border-2 border-royalBlue-800/20 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col group">
+                    <div class="relative h-72 bg-parchment-200 overflow-hidden cursor-pointer" onclick="openProductModal(${p.id})">
+                        <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-royalBlue-800 text-antiqueGold text-[10px] font-cinzel font-bold px-2.5 py-1 rounded shadow uppercase tracking-wider">
+                            ${p.category}
+                        </span>
+                        <span class="absolute top-3 right-3 bg-parchment-50/90 text-royalBlue-900 text-xs font-bold px-2 py-1 rounded shadow">
+                            Size: ${p.size}
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h4 onclick="openProductModal(${p.id})" class="heading-font font-bold text-lg text-royalBlue-900 cursor-pointer hover:text-royalBlue-700 transition">
+                                ${p.title}
+                            </h4>
+                            <div class="flex items-center justify-between mt-2">
+                                <span class="text-lg font-bold text-royalBlue-800">₹${p.price}</span>
+                                <span class="text-xs text-royalBlue-700 font-semibold bg-parchment-200 px-2 py-0.5 rounded">${p.condition}</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 pt-2 border-t border-royalBlue-800/10">
+                            <button onclick="openProductModal(${p.id})" class="flex-1 bg-parchment-200 hover:bg-parchment-300 text-royalBlue-900 py-2.5 rounded font-cinzel text-xs font-bold tracking-wider border border-royalBlue-800/30 transition">
+                                View Details
+                            </button>
+                            <button onclick="addToCart(${p.id})" class="bg-royalBlue-800 hover:bg-royalBlue-900 text-antiqueGold px-4 py-2.5 rounded text-xs font-bold shadow transition" title="Add to Bag">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button onclick="deleteProduct(${p.id})" class="bg-red-900/10 hover:bg-red-900 hover:text-white text-red-800 px-3 py-2.5 rounded text-xs transition" title="Remove Listing">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Filter handler
+        function filterCatalog(category) {
+            currentFilter = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.getAttribute('data-category') === category) {
+                    btn.className = "filter-btn px-4 py-2 rounded bg-royalBlue-800 text-antiqueGold border border-antiqueGold/40 shadow transition";
+                } else {
+                    btn.className = "filter-btn px-4 py-2 rounded bg-parchment-200 text-royalBlue-900 hover:bg-parchment-300 border border-royalBlue-800/30 transition";
+                }
+            });
+            renderCatalog();
+        }
+
+        // Admin Modal Controls
+        function openAdminModal() {
+            document.getElementById('adminModal').classList.remove('hidden');
+        }
+        function closeAdminModal() {
+            document.getElementById('adminModal').classList.add('hidden');
+            document.getElementById('addProductForm').reset();
+        }
+
+        // Add New Item Handler
+        function handleAddNewItem(e) {
+            e.preventDefault();
+            const newItem = {
+                id: Date.now(),
+                title: document.getElementById('adminTitle').value,
+                price: parseFloat(document.getElementById('adminPrice').value),
+                category: document.getElementById('adminCategory').value,
+                size: document.getElementById('adminSize').value,
+                condition: document.getElementById('adminCondition').value,
+                image: document.getElementById('adminImage').value,
+                description: document.getElementById('adminDesc').value
+            };
+            products.unshift(newItem);
+            saveProductsToStorage();
+            closeAdminModal();
+            renderCatalog();
+        }
+
+        // Delete Product
+        function deleteProduct(id) {
+            if (confirm('Are you sure you want to remove this listing?')) {
+                products = products.filter(p => p.id !== id);
+                saveProductsToStorage();
+                renderCatalog();
+            }
+        }
+
+        // Product Modal Details
+        function openProductModal(id) {
+            const p = products.find(item => item.id === id);
+            if (!p) return;
+            document.getElementById('modalImg').src = p.image;
+            document.getElementById('modalCategory').innerText = p.category.toUpperCase() + ' WEAR';
+            document.getElementById('modalTitle').innerText = p.title;
+            document.getElementById('modalPrice').innerText = '₹' + p.price;
+            document.getElementById('modalSize').innerText = p.size;
+            document.getElementById('modalCondition').innerText = p.condition;
+            document.getElementById('modalDesc').innerText = p.description;
+            document.getElementById('modalAddToCartBtn').setAttribute('onclick', `addToCart(${p.id}); closeProductModal();`);
+            document.getElementById('productModal').classList.remove('hidden');
+        }
+        function closeProductModal() {
+            document.getElementById('productModal').classList.add('hidden');
+        }
+
+        // Cart Drawer Controls
+        function toggleCart() {
+            const drawer = document.getElementById('cartDrawer');
+            drawer.classList.toggle('hidden');
+            renderCartItems();
+        }
+
+        function addToCart(id) {
+            const p = products.find(item => item.id === id);
+            if (!p) return;
+            const existing = cart.find(item => item.id === id);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ ...p, qty: 1 });
+            }
+            updateCartCount();
+            toggleCart();
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCartCount();
+            renderCartItems();
+        }
+
+        function updateCartCount() {
+            const count = cart.reduce((sum, item) => sum + item.qty, 0);
+            document.getElementById('cartCount').innerText = count;
+        }
+
+        function renderCartItems() {
+            const container = document.getElementById('cartItemsContainer');
+            let total = 0;
+            if (cart.length === 0) {
+                container.innerHTML = `<p class="text-center text-royalBlue-700 py-8 font-poppins text-sm">Your thrift bag is currently empty.</p>`;
+                document.getElementById('cartTotalPrice').innerText = '₹0';
+                return;
+            }
+            container.innerHTML = cart.map(item => {
+                total += item.price * item.qty;
+                return `
+                    <div class="flex items-center gap-4 bg-parchment-100 p-3 rounded-lg border border-royalBlue-800/20">
+                        <img src="${item.image}" class="w-16 h-16 object-cover rounded">
+                        <div class="flex-1">
+                            <h4 class="heading-font font-bold text-sm text-royalBlue-900">${item.title}</h4>
+                            <p class="text-xs text-royalBlue-700">₹${item.price} × ${item.qty}</p>
+                        </div>
+                        <button onclick="removeFromCart(${item.id})" class="text-red-700 hover:text-red-900 p-2"><i class="fas fa-trash"></i></button>
+                    </div>
+                `;
+            }).join('');
+            document.getElementById('cartTotalPrice').innerText = '₹' + total;
+        }
+
+        function checkoutWhatsApp() {
+            if (cart.length === 0) {
+                alert('Your bag is empty!');
+                return;
+            }
+            let message = "Hello Taj Vastr Team! I would like to purchase the following pre-loved items:\n\n";
+            let total = 0;
+            cart.forEach(item => {
+                message += `- ${item.title} (Size: ${item.size}) - ₹${item.price} x ${item.qty}\n`;
+                total += item.price * item.qty;
+            });
+            message += `\nTotal Amount: ₹${total}\n\nPlease confirm availability and shipping details!`;
+            const encoded = encodeURIComponent(message);
+            window.open(`https://wa.me/917820047429?text=${encoded}`, '_blank');
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Initialize empty catalog on load
+        renderCatalog();
+    </script>
+</body>
+</html>
